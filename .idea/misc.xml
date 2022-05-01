@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/My folder/Programing/Android/SongsLyricsDisplayer/Songs-lyrics-displayer/app/src/main/res/drawable/song_lyrics_border.xml" value="0.27037037037037037" />
+        <entry key="..\:/My folder/Programing/Android/SongsLyricsDisplayer/Songs-lyrics-displayer/app/src/main/res/layout/activity_details.xml" value="0.27291666666666664" />
+        <entry key="..\:/My folder/Programing/Android/SongsLyricsDisplayer/Songs-lyrics-displayer/app/src/main/res/layout/activity_main.xml" value="0.2056159420289855" />
         <entry key="..\:/My folder/Programing/Android/TuturuTestTask/app/src/main/res/layout/activity_details.xml" value="0.27291666666666664" />
         <entry key="..\:/My folder/Programing/Android/TuturuTestTask/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/My folder/Programing/Android/TuturuTestTask/app/src/main/res/layout/recycler_view_item.xml" value="0.1" />

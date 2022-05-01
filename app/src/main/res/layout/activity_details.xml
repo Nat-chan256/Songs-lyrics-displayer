@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity"
+    android:background="@drawable/background">
 
     <!-- Song title -->
     <TextView
+        android:id="@+id/tv_song_title_details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/song_title_margin_bottom"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
 
     <!-- Song lyrics -->
     <TextView
+        android:id="@+id/tv_song_lyrics_details"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"/>
 
 </LinearLayout>

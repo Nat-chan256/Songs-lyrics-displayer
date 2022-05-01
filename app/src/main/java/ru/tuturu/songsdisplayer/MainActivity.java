@@ -1,5 +1,6 @@
 package ru.tuturu.songsdisplayer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -23,7 +24,7 @@ import ru.tuturu.songsdisplayer.response.ChartTracks;
 import ru.tuturu.songsdisplayer.util.ConnectionChecker;
 import ru.tuturu.songsdisplayer.util.RequestParameters;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SongsLyricsAdapter.OnNoteListener {
 
     private List<Song> lyrics;
 
@@ -44,14 +45,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if (lyrics == null){
-            Toast toast = Toast.makeText(this, "No internet connection", Toast.LENGTH_SHORT);
+            Toast toast = Toast.makeText(this,
+                    "No internet connection",
+                    Toast.LENGTH_SHORT);
             toast.show();
             this.finishAffinity();
         }
 
         RecyclerView recyclerView = findViewById(R.id.rv_songs_lyrics);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new SongsLyricsAdapter(lyrics));
+        recyclerView.setAdapter(new SongsLyricsAdapter(lyrics, this));
+    }
+
+
+    @Override
+    public void onNoteClick(int position) {
+        Intent intent = new Intent(this, DetailsActivity.class);
+        intent.putExtra(getString(R.string.song_title), lyrics.get(position).getTitle());
+        intent.putExtra(getString(R.string.song_lyrics), lyrics.get(position).getLyrics());
+        startActivity(intent);
     }
 
     @Override
@@ -88,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
     // Initialization of GET-request to receive songs lyrics
     private Map<String, String> initializeRequestParams(){
         Map<String, String> params = new HashMap<>();
-        params.put(RequestParameters.COUNTRY, "it");
+        params.put(RequestParameters.COUNTRY, "ru");
         params.put(RequestParameters.CHART_NAME, "top");
         params.put(RequestParameters.PAGE, "1");
         params.put(RequestParameters.PAGE_SIZE, "5");
@@ -114,4 +126,5 @@ public class MainActivity extends AppCompatActivity {
             }
             return songs;
     }
+
 }
