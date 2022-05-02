@@ -14,6 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/song_title_margin_bottom"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="@dimen/rv_item_right_left_margin"
+        android:layout_marginLeft="@dimen/rv_item_right_left_margin"
         android:textColor="@color/white"
         android:textStyle="bold"/>
 
@@ -22,6 +25,8 @@
         android:id="@+id/tv_song_lyrics_details"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:layout_marginRight="@dimen/rv_item_right_left_margin"
+        android:layout_marginLeft="@dimen/rv_item_right_left_margin"/>
 
 </LinearLayout>

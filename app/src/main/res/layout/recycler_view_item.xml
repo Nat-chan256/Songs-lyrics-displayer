@@ -5,6 +5,8 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="10dp"
+    android:layout_marginRight="@dimen/rv_item_right_left_margin"
+    android:layout_marginLeft="@dimen/rv_item_right_left_margin"
     android:background="@drawable/song_lyrics_border">
 
     <!-- Song title -->

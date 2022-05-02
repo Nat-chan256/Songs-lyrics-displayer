@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import ru.tuturu.songsdisplayer.util.StringUtil;
+
 public class DetailsActivity extends AppCompatActivity {
 
     @Override
@@ -17,7 +19,11 @@ public class DetailsActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         if (extras != null){
             tvSongTitle.setText(extras.getString(getString(R.string.song_title)));
-            tvSongLyrics.setText(extras.getString(getString(R.string.song_lyrics)));
+            tvSongLyrics.setText(
+                    StringUtil.removeWarningLabel(
+                            extras.getString(getString(R.string.song_lyrics))
+                    )
+            );
         }
     }
 }

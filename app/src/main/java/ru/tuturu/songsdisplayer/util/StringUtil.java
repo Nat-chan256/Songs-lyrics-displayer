@@ -9,4 +9,9 @@ public class StringUtil {
             result += lines[i] + "\n";
         return result;
     }
+
+    // Removes label "***** This Lyrics is NOT for commercial use *******"
+    public static String removeWarningLabel(String text){
+        return text.substring(0, text.indexOf("*"));
+    }
 }

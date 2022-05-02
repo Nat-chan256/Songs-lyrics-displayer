@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TuturuTestTask</string>
+    <string name="app_name">Songs lyrics displayer</string>
     <string name="song_title">song_title</string>
     <string name="song_lyrics">song_lyrics</string>
     <string name="read_more">... Читать далее</string>
